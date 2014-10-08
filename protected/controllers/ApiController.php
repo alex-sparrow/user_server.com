@@ -1,117 +1,143 @@
 <?php
 
-class ApiController extends Controller
-{
-	public function actionCreatePin()
-	{
-        //get Parameteres
-        $req = Yii::app()->request;
-        $s_id = $req->getParam('sessionid');
-        $m_name = $req->getParam('name');
-        $m_lat = $req->getParam('lat');
-        $m_lng = $req->getParam('lng');
-        if(empty($m_name)||empty($s_id)||empty($m_lat)||empty($m_lng)) exit('Not enough parameteres!');//check that parameteres not empty
+class ApiController extends Controller {
 
-        //checking Session
-        $c_ses = new NSession();
-        $u_id = $c_ses->check($s_id);   //check session key
-        if(empty($u_id)) exit('Incorrect session key!!!');
+	public function actionCreatePin() {
+		//get Parameteres
+		$req    = Yii::app()->request;
+		$answ  = new ServAnswer();
+		$error = new MyError();
+		$s_id   = $req->getParam( 'sessionid' );
+		$m_name = $req->getParam( 'name' );
+		$m_lat  = $req->getParam( 'lat' );
+		$m_lng  = $req->getParam( 'lng' );
+		if ( empty( $m_name ) || empty( $s_id ) || empty( $m_lat ) || empty( $m_lng ) ) {
+			$error->Raise(1,'Not enough parametres');
+		}//check that parameteres not empty
 
-        //pin creation
-        $latlng = array('lat'=>$m_lat,'lng'=>$m_lng);
+		//checking Session
+		$c_ses = new NSession();
+		$u_id  = $c_ses->check( $s_id );   //check session key
+		if ( empty( $u_id ) ) {
+			$error->Raise(11,'Incorrect Session ID');
+		}
 
-        $pin = new Marker();
-        $pin->name = $m_name;
-        $pin->latlng=$latlng;
-        $pin->user_id = $u_id*1;
+		//pin creation
+		$latlng = array( 'lat' => $m_lat, 'lng' => $m_lng );
 
-        $pin->save();
+		$pin          = new Marker();
+		$pin->name    = $m_name;
+		$pin->latlng  = $latlng;
+		$pin->user_id = $u_id * 1;
+
+		$pin->save();
 
 
-        //create JSON data
-        $s_data = array('session_id'=>$c_ses->get_key());
-        echo CJSON::encode($s_data);
+		//create JSON data
+		$s_data = array( 'session_id' => $c_ses->get_key() );
+		$answ->Show($s_data);
 
 	}
 
-	public function actionGetPinList()
-	{
-        $req = Yii::app()->request;
-        $s_id = $req->getParam('sessionid');
+	public function actionGetPinList() {
+		$req   = Yii::app()->request;
+		$answ  = new ServAnswer();
+		$error = new MyError();
 
-        if(empty($s_id)) exit('Empty session id!');//check that parameteres not empty
+		$s_id = $req->getParam( 'sessionid' );
 
-        //checking Session
-        $c_ses = new NSession();
-        $u_id = $c_ses->check($s_id);   //check session key
-        if(empty($u_id)) exit('Incorrect session key!!!');
+		if ( empty( $s_id ) ) {
+			$error->Raise(10,'Empty Session Id');
+		}//check that parameteres not empty
+
+		//checking Session
+		$c_ses = new NSession();
+		$u_id  = $c_ses->check( $s_id );   //check session key
+		if ( empty( $u_id ) ) {
+			$error->Raise(11,'Incorrect Session ID');
+		}
 
 
-        $markers = Marker::model()->limitted($u_id,$req->getParam('limit'),$req->getParam('offset'))->findAll();
-        //create JSON data
-        $s_data = array('session_id'=>$c_ses->get_key(),'markers'=>$markers);
-        echo CJSON::encode($s_data);
+		$markers = Marker::model()->limitted( $u_id, $req->getParam( 'limit' ), $req->getParam( 'offset' ) )->findAll();
+		//create JSON data
+		$s_data = array( 'session_id' => $c_ses->get_key(), 'markers' => $markers );
+
+		$answ->Show($s_data);
 	}
 
-	public function actionIndex()
-	{
-        echo 'Service';
+	public function actionIndex() {
+		$this->actionLogin();
 	}
 
-	public function actionLogin()
-	{
-        $req = Yii::app()->request;
-        $login = $req->getParam('email');
-        $password = $req->getParam('password');
-        if(empty($login)||empty($password)) exit('not enough par');//check that parameteres are not empty
+	public function actionLogin() {
+		$answ  = new ServAnswer();
+		$error = new MyError();
+		$req      = Yii::app()->request;
+		$login    = $req->getParam( 'email' );
+		$password = $req->getParam( 'password' );
 
-        if(strlen($password)<6) exit('short password'); //check password length
+		if ( empty( $login ) || empty( $password ) ) {
+			$error->Raise(1,'Not enough parametres');
+		}//check that parameteres are not empty
 
-        $user = User::model()->find('login=:login AND password=:password', array(':login'=>$login,':password'=>md5($password)));//check if user exists
-        if(empty($user)) exit('No user!!!');
+		if ( strlen( $password ) < 6 ) {
+			$error->Raise(2,'Too short password');
+		} //check password length
 
-        //set session
-        $c_ses = new NSession();
-        $c_ses->set($user->id);
+		$user = User::model()->find( 'login=:login AND password=:password', array( ':login' => $login, ':password' => md5( $password ) ) );//check if user exists
+		if ( empty( $user ) ) {
+			$error->Raise(3,'Login or password is incorrect');
+		}
 
-        //create JSON data
-        $s_data = array('session_id'=>$c_ses->get_key());
-        echo CJSON::encode($s_data);
+		//set session
+		$c_ses = new NSession();
+		$c_ses->set( $user->id );
+
+		//create JSON data
+		$s_data = array( 'session_id' => $c_ses->get_key() );
+		$answ->Show($s_data);
 	}
 
 
-	public function actionSignUp()
-	{
-        $req = Yii::app()->request;
-        $login = $req->getParam('email');
-        $password = $req->getParam('password');
-        $fname = $req->getParam('fname');
-        $lname = $req->getParam('lname');
+	public function actionSignUp() {
+		$req      = Yii::app()->request;
+		$answ  = new ServAnswer();
+		$error = new MyError();
+		$login    = $req->getParam( 'email' );
+		$password = $req->getParam( 'password' );
+		$fname    = $req->getParam( 'fname' );
+		$lname    = $req->getParam( 'lname' );
 
-        if(empty($login)||empty($password)||empty($fname)||empty($lname)) exit('not enough par');//check that parameteres not empty
+		if ( empty( $login ) || empty( $password ) || empty( $fname ) || empty( $lname ) ) {
+			$error->Raise(1,'Not enough parametres');
+		}//check that parameteres not empty
 
-        if(strlen($password)<6) exit('short password'); //check password length
+		if ( strlen( $password ) < 6 ) {
+			$error->Raise(2,'Too short password');
+		} //check password length
 
-        $user = User::model()->find('login=:login', array(':login'=>$login));//check if user exists
-        if(!empty($user)) exit(2);
+		$user = User::model()->find( 'login=:login', array( ':login' => $login ) );//check if user exists
+		if ( !empty( $user ) ) {
+			$error->Raise(3,'Login or password is incorrect');
+		}
 
-        //save user
-        $user = new User();
+		//save user
+		$user = new User();
 
-        $user->login = $login;
-        $user->password = md5($password);
-        $user->fname = $fname;
-        $user->lname = $lname;
+		$user->login    = $login;
+		$user->password = md5( $password );
+		$user->fname    = $fname;
+		$user->lname    = $lname;
 
-        $user->save();
+		$user->save();
 
-        //set session
-        $c_ses = new NSession();
-        $c_ses->set($user->id);
+		//set session
+		$c_ses = new NSession();
+		$c_ses->set( $user->id );
 
-        //create JSON data
-        $s_data = array('session_id'=>$c_ses->get_key());
-        echo CJSON::encode($s_data);
+		//create JSON data
+		$s_data = array( 'session_id' => $c_ses->get_key() );
+		$answ->Show($s_data);
 	}
 
 	// Uncomment the following methods and override them if needed

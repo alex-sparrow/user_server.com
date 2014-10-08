@@ -411,3 +411,637 @@ Stack trace:
 #12 {main}
 REQUEST_URI=/api/GetPinList?sessionid=47f00f10a93d9e77099e12435a761fa570df9607fb8607fdd23b6f2bdf5b02f3
 ---
+2014/10/08 14:44:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/alexander/projects/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/alexander/projects/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/alexander/projects/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/alexander/projects/user_server.com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/10/08 14:49:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "Api".' in /home/alexander/projects/yii/framework/web/CController.php:483
+Stack trace:
+#0 /home/alexander/projects/yii/framework/web/CController.php(270): CController->missingAction('Api')
+#1 /home/alexander/projects/yii/framework/web/CWebApplication.php(282): CController->run('Api')
+#2 /home/alexander/projects/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Api/Api')
+#3 /home/alexander/projects/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/alexander/projects/user_server.com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Api/Api?
+---
+2014/10/08 15:19:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "Api".' in /home/alexander/projects/yii/framework/web/CController.php:483
+Stack trace:
+#0 /home/alexander/projects/yii/framework/web/CController.php(270): CController->missingAction('Api')
+#1 /home/alexander/projects/yii/framework/web/CWebApplication.php(282): CController->run('Api')
+#2 /home/alexander/projects/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Api/Api')
+#3 /home/alexander/projects/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/alexander/projects/user_server.com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Api/Api?
+---
+2014/10/08 15:19:39 [error] [exception.CException] exception 'CException' with message 'ApiController and its behaviors do not have a method or closure named "Login".' in /home/alexander/projects/yii/framework/base/CComponent.php:266
+Stack trace:
+#0 /home/alexander/projects/user_server.com/protected/controllers/ApiController.php(70): CComponent->__call('Login', Array)
+#1 /home/alexander/projects/user_server.com/protected/controllers/ApiController.php(70): ApiController->Login()
+#2 /home/alexander/projects/yii/framework/web/actions/CInlineAction.php(49): ApiController->actionIndex()
+#3 /home/alexander/projects/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /home/alexander/projects/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /home/alexander/projects/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /home/alexander/projects/yii/framework/web/CWebApplication.php(282): CController->run('')
+#7 /home/alexander/projects/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('api')
+#8 /home/alexander/projects/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#9 /home/alexander/projects/user_server.com/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/api
+---
+2014/10/08 15:19:39 [error] [exception.CException] exception 'CException' with message 'ApiController and its behaviors do not have a method or closure named "Login".' in /home/alexander/projects/yii/framework/base/CComponent.php:266
+Stack trace:
+#0 /home/alexander/projects/user_server.com/protected/controllers/ApiController.php(70): CComponent->__call('Login', Array)
+#1 /home/alexander/projects/user_server.com/protected/controllers/ApiController.php(70): ApiController->Login()
+#2 /home/alexander/projects/yii/framework/web/actions/CInlineAction.php(49): ApiController->actionIndex()
+#3 /home/alexander/projects/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /home/alexander/projects/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /home/alexander/projects/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /home/alexander/projects/yii/framework/web/CWebApplication.php(282): CController->run('')
+#7 /home/alexander/projects/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('api')
+#8 /home/alexander/projects/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#9 /home/alexander/projects/user_server.com/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/api
+HTTP_REFERER=http://user_server.com/api
+---
+2014/10/08 15:20:06 [error] [php] include(MyError.php): failed to open stream: No such file or directory (/home/alexander/projects/yii/framework/YiiBase.php:427)
+Stack trace:
+#0 /home/alexander/projects/user_server.com/protected/controllers/ApiController.php(75): spl_autoload_call()
+#1 /home/alexander/projects/user_server.com/protected/controllers/ApiController.php(70): ApiController->actionLogin()
+#2 /home/alexander/projects/yii/framework/web/actions/CInlineAction.php(49): ApiController->actionIndex()
+#3 /home/alexander/projects/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#4 /home/alexander/projects/yii/framework/web/CController.php(286): ApiController->runAction()
+#5 /home/alexander/projects/yii/framework/web/CController.php(265): ApiController->runActionWithFilters()
+#6 /home/alexander/projects/yii/framework/web/CWebApplication.php(282): ApiController->run()
+#7 /home/alexander/projects/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#8 /home/alexander/projects/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#9 /home/alexander/projects/user_server.com/index.php(13): CWebApplication->run()
+REQUEST_URI=/api
+in /home/alexander/projects/user_server.com/protected/controllers/ApiController.php (75)
+in /home/alexander/projects/user_server.com/protected/controllers/ApiController.php (70)
+in /home/alexander/projects/user_server.com/index.php (13)
+2014/10/08 15:20:06 [error] [php] include(MyError.php): failed to open stream: No such file or directory (/home/alexander/projects/yii/framework/YiiBase.php:427)
+Stack trace:
+#0 /home/alexander/projects/user_server.com/protected/controllers/ApiController.php(75): spl_autoload_call()
+#1 /home/alexander/projects/user_server.com/protected/controllers/ApiController.php(70): ApiController->actionLogin()
+#2 /home/alexander/projects/yii/framework/web/actions/CInlineAction.php(49): ApiController->actionIndex()
+#3 /home/alexander/projects/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#4 /home/alexander/projects/yii/framework/web/CController.php(286): ApiController->runAction()
+#5 /home/alexander/projects/yii/framework/web/CController.php(265): ApiController->runActionWithFilters()
+#6 /home/alexander/projects/yii/framework/web/CWebApplication.php(282): ApiController->run()
+#7 /home/alexander/projects/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#8 /home/alexander/projects/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#9 /home/alexander/projects/user_server.com/index.php(13): CWebApplication->run()
+REQUEST_URI=/api
+in /home/alexander/projects/user_server.com/protected/controllers/ApiController.php (75)
+in /home/alexander/projects/user_server.com/protected/controllers/ApiController.php (70)
+in /home/alexander/projects/user_server.com/index.php (13)
+2014/10/08 15:21:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "Api".' in /home/alexander/projects/yii/framework/web/CController.php:483
+Stack trace:
+#0 /home/alexander/projects/yii/framework/web/CController.php(270): CController->missingAction('Api')
+#1 /home/alexander/projects/yii/framework/web/CWebApplication.php(282): CController->run('Api')
+#2 /home/alexander/projects/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Api/Api')
+#3 /home/alexander/projects/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/alexander/projects/user_server.com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Api/Api?
+---
+2014/10/08 15:21:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "Api".' in /home/alexander/projects/yii/framework/web/CController.php:483
+Stack trace:
+#0 /home/alexander/projects/yii/framework/web/CController.php(270): CController->missingAction('Api')
+#1 /home/alexander/projects/yii/framework/web/CWebApplication.php(282): CController->run('Api')
+#2 /home/alexander/projects/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Api/Api')
+#3 /home/alexander/projects/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/alexander/projects/user_server.com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Api/Api?
+---
+2014/10/08 15:21:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "Api".' in /home/alexander/projects/yii/framework/web/CController.php:483
+Stack trace:
+#0 /home/alexander/projects/yii/framework/web/CController.php(270): CController->missingAction('Api')
+#1 /home/alexander/projects/yii/framework/web/CWebApplication.php(282): CController->run('Api')
+#2 /home/alexander/projects/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Api/Api')
+#3 /home/alexander/projects/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/alexander/projects/user_server.com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Api/Api?
+---
+2014/10/08 15:21:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "Api".' in /home/alexander/projects/yii/framework/web/CController.php:483
+Stack trace:
+#0 /home/alexander/projects/yii/framework/web/CController.php(270): CController->missingAction('Api')
+#1 /home/alexander/projects/yii/framework/web/CWebApplication.php(282): CController->run('Api')
+#2 /home/alexander/projects/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Api/Api')
+#3 /home/alexander/projects/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/alexander/projects/user_server.com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Api/Api?
+---
+2014/10/08 15:21:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "Api".' in /home/alexander/projects/yii/framework/web/CController.php:483
+Stack trace:
+#0 /home/alexander/projects/yii/framework/web/CController.php(270): CController->missingAction('Api')
+#1 /home/alexander/projects/yii/framework/web/CWebApplication.php(282): CController->run('Api')
+#2 /home/alexander/projects/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Api/Api')
+#3 /home/alexander/projects/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/alexander/projects/user_server.com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Api/Api?
+---
+2014/10/08 15:21:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "Api".' in /home/alexander/projects/yii/framework/web/CController.php:483
+Stack trace:
+#0 /home/alexander/projects/yii/framework/web/CController.php(270): CController->missingAction('Api')
+#1 /home/alexander/projects/yii/framework/web/CWebApplication.php(282): CController->run('Api')
+#2 /home/alexander/projects/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Api/Api')
+#3 /home/alexander/projects/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/alexander/projects/user_server.com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Api/Api?
+---
+2014/10/08 15:21:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "api".' in /home/alexander/projects/yii/framework/web/CController.php:483
+Stack trace:
+#0 /home/alexander/projects/yii/framework/web/CController.php(270): CController->missingAction('api')
+#1 /home/alexander/projects/yii/framework/web/CWebApplication.php(282): CController->run('api')
+#2 /home/alexander/projects/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('api/api')
+#3 /home/alexander/projects/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/alexander/projects/user_server.com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/api/api?
+---
+2014/10/08 15:21:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "api".' in /home/alexander/projects/yii/framework/web/CController.php:483
+Stack trace:
+#0 /home/alexander/projects/yii/framework/web/CController.php(270): CController->missingAction('api')
+#1 /home/alexander/projects/yii/framework/web/CWebApplication.php(282): CController->run('api')
+#2 /home/alexander/projects/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('api/api')
+#3 /home/alexander/projects/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/alexander/projects/user_server.com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/api/api?
+---
+2014/10/08 15:21:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "api".' in /home/alexander/projects/yii/framework/web/CController.php:483
+Stack trace:
+#0 /home/alexander/projects/yii/framework/web/CController.php(270): CController->missingAction('api')
+#1 /home/alexander/projects/yii/framework/web/CWebApplication.php(282): CController->run('api')
+#2 /home/alexander/projects/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('api/api')
+#3 /home/alexander/projects/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/alexander/projects/user_server.com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/api/api?
+---
+2014/10/08 15:21:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "api".' in /home/alexander/projects/yii/framework/web/CController.php:483
+Stack trace:
+#0 /home/alexander/projects/yii/framework/web/CController.php(270): CController->missingAction('api')
+#1 /home/alexander/projects/yii/framework/web/CWebApplication.php(282): CController->run('api')
+#2 /home/alexander/projects/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('api/api')
+#3 /home/alexander/projects/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/alexander/projects/user_server.com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/api/api?
+---
+2014/10/08 15:21:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "api".' in /home/alexander/projects/yii/framework/web/CController.php:483
+Stack trace:
+#0 /home/alexander/projects/yii/framework/web/CController.php(270): CController->missingAction('api')
+#1 /home/alexander/projects/yii/framework/web/CWebApplication.php(282): CController->run('api')
+#2 /home/alexander/projects/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('api/api')
+#3 /home/alexander/projects/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/alexander/projects/user_server.com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/api/api?
+---
+2014/10/08 15:21:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "api".' in /home/alexander/projects/yii/framework/web/CController.php:483
+Stack trace:
+#0 /home/alexander/projects/yii/framework/web/CController.php(270): CController->missingAction('api')
+#1 /home/alexander/projects/yii/framework/web/CWebApplication.php(282): CController->run('api')
+#2 /home/alexander/projects/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('api/api')
+#3 /home/alexander/projects/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/alexander/projects/user_server.com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/api/api?
+---
+2014/10/08 15:21:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "api".' in /home/alexander/projects/yii/framework/web/CController.php:483
+Stack trace:
+#0 /home/alexander/projects/yii/framework/web/CController.php(270): CController->missingAction('api')
+#1 /home/alexander/projects/yii/framework/web/CWebApplication.php(282): CController->run('api')
+#2 /home/alexander/projects/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('api/api')
+#3 /home/alexander/projects/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/alexander/projects/user_server.com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/api/api?
+---
+2014/10/08 15:21:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "api".' in /home/alexander/projects/yii/framework/web/CController.php:483
+Stack trace:
+#0 /home/alexander/projects/yii/framework/web/CController.php(270): CController->missingAction('api')
+#1 /home/alexander/projects/yii/framework/web/CWebApplication.php(282): CController->run('api')
+#2 /home/alexander/projects/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('api/api')
+#3 /home/alexander/projects/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/alexander/projects/user_server.com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/api/api?
+---
+2014/10/08 15:21:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "api".' in /home/alexander/projects/yii/framework/web/CController.php:483
+Stack trace:
+#0 /home/alexander/projects/yii/framework/web/CController.php(270): CController->missingAction('api')
+#1 /home/alexander/projects/yii/framework/web/CWebApplication.php(282): CController->run('api')
+#2 /home/alexander/projects/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('api/api')
+#3 /home/alexander/projects/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/alexander/projects/user_server.com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/api/api?
+---
+2014/10/08 15:21:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "api".' in /home/alexander/projects/yii/framework/web/CController.php:483
+Stack trace:
+#0 /home/alexander/projects/yii/framework/web/CController.php(270): CController->missingAction('api')
+#1 /home/alexander/projects/yii/framework/web/CWebApplication.php(282): CController->run('api')
+#2 /home/alexander/projects/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('api/api')
+#3 /home/alexander/projects/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/alexander/projects/user_server.com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/api/api?
+---
+2014/10/08 15:23:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "sign_up".' in /home/alexander/projects/yii/framework/web/CController.php:483
+Stack trace:
+#0 /home/alexander/projects/yii/framework/web/CController.php(270): CController->missingAction('sign_up')
+#1 /home/alexander/projects/yii/framework/web/CWebApplication.php(282): CController->run('sign_up')
+#2 /home/alexander/projects/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('api/sign_up')
+#3 /home/alexander/projects/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/alexander/projects/user_server.com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/api/sign_up?email=shurik&password=123&fname=alex&r_name=r
+---
+2014/10/08 15:23:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "sign_up".' in /home/alexander/projects/yii/framework/web/CController.php:483
+Stack trace:
+#0 /home/alexander/projects/yii/framework/web/CController.php(270): CController->missingAction('sign_up')
+#1 /home/alexander/projects/yii/framework/web/CWebApplication.php(282): CController->run('sign_up')
+#2 /home/alexander/projects/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('api/sign_up')
+#3 /home/alexander/projects/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/alexander/projects/user_server.com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/api/sign_up?email=shurik&password=123&fname=alex&r_name=r
+HTTP_REFERER=http://user_server.com/api/sign_up?email=shurik&password=123&fname=alex&r_name=r
+---
+2014/10/08 15:25:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "sign_up".' in /home/alexander/projects/yii/framework/web/CController.php:483
+Stack trace:
+#0 /home/alexander/projects/yii/framework/web/CController.php(270): CController->missingAction('sign_up')
+#1 /home/alexander/projects/yii/framework/web/CWebApplication.php(282): CController->run('sign_up')
+#2 /home/alexander/projects/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('api/sign_up')
+#3 /home/alexander/projects/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/alexander/projects/user_server.com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/api/sign_up?email=shurik&password=123&fname=alex&r_name=r
+---
+2014/10/08 15:25:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "sign_up".' in /home/alexander/projects/yii/framework/web/CController.php:483
+Stack trace:
+#0 /home/alexander/projects/yii/framework/web/CController.php(270): CController->missingAction('sign_up')
+#1 /home/alexander/projects/yii/framework/web/CWebApplication.php(282): CController->run('sign_up')
+#2 /home/alexander/projects/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('api/sign_up')
+#3 /home/alexander/projects/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/alexander/projects/user_server.com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/api/sign_up?email=shurik&password=123&fname=alex&r_name=r
+HTTP_REFERER=http://user_server.com/api/sign_up?email=shurik&password=123&fname=alex&r_name=r
+---
+2014/10/08 15:26:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "sign_up.".' in /home/alexander/projects/yii/framework/web/CController.php:483
+Stack trace:
+#0 /home/alexander/projects/yii/framework/web/CController.php(270): CController->missingAction('sign_up.')
+#1 /home/alexander/projects/yii/framework/web/CWebApplication.php(282): CController->run('sign_up.')
+#2 /home/alexander/projects/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('api/sign_up.')
+#3 /home/alexander/projects/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/alexander/projects/user_server.com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/api/sign_up.?email=shurik&password=123&fname=alex&r_name=r
+---
+2014/10/08 15:26:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "sign_up.".' in /home/alexander/projects/yii/framework/web/CController.php:483
+Stack trace:
+#0 /home/alexander/projects/yii/framework/web/CController.php(270): CController->missingAction('sign_up.')
+#1 /home/alexander/projects/yii/framework/web/CWebApplication.php(282): CController->run('sign_up.')
+#2 /home/alexander/projects/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('api/sign_up.')
+#3 /home/alexander/projects/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/alexander/projects/user_server.com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/api/sign_up.?email=shurik&password=123&fname=alex&r_name=r
+HTTP_REFERER=http://user_server.com/api/sign_up.?email=shurik&password=123&fname=alex&r_name=r
+---
+2014/10/08 15:26:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "sign_up".' in /home/alexander/projects/yii/framework/web/CController.php:483
+Stack trace:
+#0 /home/alexander/projects/yii/framework/web/CController.php(270): CController->missingAction('sign_up')
+#1 /home/alexander/projects/yii/framework/web/CWebApplication.php(282): CController->run('sign_up')
+#2 /home/alexander/projects/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('api/sign_up')
+#3 /home/alexander/projects/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/alexander/projects/user_server.com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/api/sign_up/?email=shurik&password=123&fname=alex&r_name=r
+---
+2014/10/08 15:26:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "sign_up".' in /home/alexander/projects/yii/framework/web/CController.php:483
+Stack trace:
+#0 /home/alexander/projects/yii/framework/web/CController.php(270): CController->missingAction('sign_up')
+#1 /home/alexander/projects/yii/framework/web/CWebApplication.php(282): CController->run('sign_up')
+#2 /home/alexander/projects/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('api/sign_up')
+#3 /home/alexander/projects/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/alexander/projects/user_server.com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/api/sign_up/?email=shurik&password=123&fname=alex&r_name=r
+HTTP_REFERER=http://user_server.com/api/sign_up/?email=shurik&password=123&fname=alex&r_name=r
+---
+2014/10/08 15:26:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "sign_up".' in /home/alexander/projects/yii/framework/web/CController.php:483
+Stack trace:
+#0 /home/alexander/projects/yii/framework/web/CController.php(270): CController->missingAction('sign_up')
+#1 /home/alexander/projects/yii/framework/web/CWebApplication.php(282): CController->run('sign_up')
+#2 /home/alexander/projects/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('api/sign_up')
+#3 /home/alexander/projects/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/alexander/projects/user_server.com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/api/sign_up/
+---
+2014/10/08 15:26:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "sign_up".' in /home/alexander/projects/yii/framework/web/CController.php:483
+Stack trace:
+#0 /home/alexander/projects/yii/framework/web/CController.php(270): CController->missingAction('sign_up')
+#1 /home/alexander/projects/yii/framework/web/CWebApplication.php(282): CController->run('sign_up')
+#2 /home/alexander/projects/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('api/sign_up')
+#3 /home/alexander/projects/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/alexander/projects/user_server.com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/api/sign_up/
+HTTP_REFERER=http://user_server.com/api/sign_up/
+---
+2014/10/08 15:32:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "api".' in /home/alexander/projects/yii/framework/web/CController.php:483
+Stack trace:
+#0 /home/alexander/projects/yii/framework/web/CController.php(270): CController->missingAction('api')
+#1 /home/alexander/projects/yii/framework/web/CWebApplication.php(282): CController->run('api')
+#2 /home/alexander/projects/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('api/api')
+#3 /home/alexander/projects/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/alexander/projects/user_server.com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/api/api?
+---
+2014/10/08 15:33:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "api".' in /home/alexander/projects/yii/framework/web/CController.php:483
+Stack trace:
+#0 /home/alexander/projects/yii/framework/web/CController.php(270): CController->missingAction('api')
+#1 /home/alexander/projects/yii/framework/web/CWebApplication.php(282): CController->run('api')
+#2 /home/alexander/projects/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('api/api')
+#3 /home/alexander/projects/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/alexander/projects/user_server.com/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/api/api?
+---
+2014/10/08 15:33:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "signup/signup".' in /home/alexander/projects/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/alexander/projects/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('signup/signup')
+#1 /home/alexander/projects/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/alexander/projects/user_server.com/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/signup/signup/?
+---
+2014/10/08 15:38:36 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''25f7f3513363d0335b9493f72867b312153a9ded973eef23269fbf2b3d92f083 LIMIT 1' at line 1. The SQL statement executed was: SELECT * FROM `tbl_session_id` `t` WHERE session_key = '25f7f3513363d0335b9493f72867b312153a9ded973eef23269fbf2b3d92f083 LIMIT 1.
+in /home/alexander/projects/user_server.com/protected/components/NSession.php (9)
+in /home/alexander/projects/user_server.com/protected/controllers/ApiController.php (55)
+in /home/alexander/projects/user_server.com/index.php (13)
+2014/10/08 15:38:36 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''25f7f3513363d0335b9493f72867b312153a9ded973eef23269fbf2b3d92f083 LIMIT 1' at line 1. The SQL statement executed was: SELECT * FROM `tbl_session_id` `t` WHERE session_key = '25f7f3513363d0335b9493f72867b312153a9ded973eef23269fbf2b3d92f083 LIMIT 1' in /home/alexander/projects/yii/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /home/alexander/projects/yii/framework/db/CDbCommand.php(415): CDbCommand->queryInternal('fetch', Array, Array)
+#1 /home/alexander/projects/yii/framework/db/ar/CActiveRecord.php(1351): CDbCommand->queryRow()
+#2 /home/alexander/projects/yii/framework/db/ar/CActiveRecord.php(1456): CActiveRecord->query(Object(CDbCriteria))
+#3 /home/alexander/projects/user_server.com/protected/components/NSession.php(9): CActiveRecord->find()
+#4 /home/alexander/projects/user_server.com/protected/controllers/ApiController.php(55): NSession->check('25f7f3513363d03...')
+#5 /home/alexander/projects/yii/framework/web/actions/CInlineAction.php(49): ApiController->actionGetPinList()
+#6 /home/alexander/projects/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#7 /home/alexander/projects/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#8 /home/alexander/projects/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /home/alexander/projects/yii/framework/web/CWebApplication.php(282): CController->run('GetPinList')
+#10 /home/alexander/projects/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('api/GetPinList')
+#11 /home/alexander/projects/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#12 /home/alexander/projects/user_server.com/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/api/GetPinList/?sessionid=25f7f3513363d0335b9493f72867b312153a9ded973eef23269fbf2b3d92f083
+---
+2014/10/08 15:38:37 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''25f7f3513363d0335b9493f72867b312153a9ded973eef23269fbf2b3d92f083 LIMIT 1' at line 1. The SQL statement executed was: SELECT * FROM `tbl_session_id` `t` WHERE session_key = '25f7f3513363d0335b9493f72867b312153a9ded973eef23269fbf2b3d92f083 LIMIT 1.
+in /home/alexander/projects/user_server.com/protected/components/NSession.php (9)
+in /home/alexander/projects/user_server.com/protected/controllers/ApiController.php (55)
+in /home/alexander/projects/user_server.com/index.php (13)
+2014/10/08 15:38:37 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''25f7f3513363d0335b9493f72867b312153a9ded973eef23269fbf2b3d92f083 LIMIT 1' at line 1. The SQL statement executed was: SELECT * FROM `tbl_session_id` `t` WHERE session_key = '25f7f3513363d0335b9493f72867b312153a9ded973eef23269fbf2b3d92f083 LIMIT 1' in /home/alexander/projects/yii/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /home/alexander/projects/yii/framework/db/CDbCommand.php(415): CDbCommand->queryInternal('fetch', Array, Array)
+#1 /home/alexander/projects/yii/framework/db/ar/CActiveRecord.php(1351): CDbCommand->queryRow()
+#2 /home/alexander/projects/yii/framework/db/ar/CActiveRecord.php(1456): CActiveRecord->query(Object(CDbCriteria))
+#3 /home/alexander/projects/user_server.com/protected/components/NSession.php(9): CActiveRecord->find()
+#4 /home/alexander/projects/user_server.com/protected/controllers/ApiController.php(55): NSession->check('25f7f3513363d03...')
+#5 /home/alexander/projects/yii/framework/web/actions/CInlineAction.php(49): ApiController->actionGetPinList()
+#6 /home/alexander/projects/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#7 /home/alexander/projects/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#8 /home/alexander/projects/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /home/alexander/projects/yii/framework/web/CWebApplication.php(282): CController->run('GetPinList')
+#10 /home/alexander/projects/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('api/GetPinList')
+#11 /home/alexander/projects/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#12 /home/alexander/projects/user_server.com/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/api/GetPinList/?sessionid=25f7f3513363d0335b9493f72867b312153a9ded973eef23269fbf2b3d92f083
+HTTP_REFERER=http://user_server.com/api/GetPinList/?sessionid=25f7f3513363d0335b9493f72867b312153a9ded973eef23269fbf2b3d92f083
+---
+2014/10/08 15:38:40 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''25f7f3513363d0335b9493f72867b312153a9ded973eef23269fbf2b3d92f083 LIMIT 1' at line 1. The SQL statement executed was: SELECT * FROM `tbl_session_id` `t` WHERE session_key = '25f7f3513363d0335b9493f72867b312153a9ded973eef23269fbf2b3d92f083 LIMIT 1.
+in /home/alexander/projects/user_server.com/protected/components/NSession.php (9)
+in /home/alexander/projects/user_server.com/protected/controllers/ApiController.php (55)
+in /home/alexander/projects/user_server.com/index.php (13)
+2014/10/08 15:38:40 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''25f7f3513363d0335b9493f72867b312153a9ded973eef23269fbf2b3d92f083 LIMIT 1' at line 1. The SQL statement executed was: SELECT * FROM `tbl_session_id` `t` WHERE session_key = '25f7f3513363d0335b9493f72867b312153a9ded973eef23269fbf2b3d92f083 LIMIT 1' in /home/alexander/projects/yii/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /home/alexander/projects/yii/framework/db/CDbCommand.php(415): CDbCommand->queryInternal('fetch', Array, Array)
+#1 /home/alexander/projects/yii/framework/db/ar/CActiveRecord.php(1351): CDbCommand->queryRow()
+#2 /home/alexander/projects/yii/framework/db/ar/CActiveRecord.php(1456): CActiveRecord->query(Object(CDbCriteria))
+#3 /home/alexander/projects/user_server.com/protected/components/NSession.php(9): CActiveRecord->find()
+#4 /home/alexander/projects/user_server.com/protected/controllers/ApiController.php(55): NSession->check('25f7f3513363d03...')
+#5 /home/alexander/projects/yii/framework/web/actions/CInlineAction.php(49): ApiController->actionGetPinList()
+#6 /home/alexander/projects/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#7 /home/alexander/projects/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#8 /home/alexander/projects/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /home/alexander/projects/yii/framework/web/CWebApplication.php(282): CController->run('GetPinList')
+#10 /home/alexander/projects/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('api/GetPinList')
+#11 /home/alexander/projects/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#12 /home/alexander/projects/user_server.com/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/api/GetPinList/?sessionid=25f7f3513363d0335b9493f72867b312153a9ded973eef23269fbf2b3d92f083
+---
+2014/10/08 15:38:40 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''25f7f3513363d0335b9493f72867b312153a9ded973eef23269fbf2b3d92f083 LIMIT 1' at line 1. The SQL statement executed was: SELECT * FROM `tbl_session_id` `t` WHERE session_key = '25f7f3513363d0335b9493f72867b312153a9ded973eef23269fbf2b3d92f083 LIMIT 1.
+in /home/alexander/projects/user_server.com/protected/components/NSession.php (9)
+in /home/alexander/projects/user_server.com/protected/controllers/ApiController.php (55)
+in /home/alexander/projects/user_server.com/index.php (13)
+2014/10/08 15:38:40 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''25f7f3513363d0335b9493f72867b312153a9ded973eef23269fbf2b3d92f083 LIMIT 1' at line 1. The SQL statement executed was: SELECT * FROM `tbl_session_id` `t` WHERE session_key = '25f7f3513363d0335b9493f72867b312153a9ded973eef23269fbf2b3d92f083 LIMIT 1' in /home/alexander/projects/yii/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /home/alexander/projects/yii/framework/db/CDbCommand.php(415): CDbCommand->queryInternal('fetch', Array, Array)
+#1 /home/alexander/projects/yii/framework/db/ar/CActiveRecord.php(1351): CDbCommand->queryRow()
+#2 /home/alexander/projects/yii/framework/db/ar/CActiveRecord.php(1456): CActiveRecord->query(Object(CDbCriteria))
+#3 /home/alexander/projects/user_server.com/protected/components/NSession.php(9): CActiveRecord->find()
+#4 /home/alexander/projects/user_server.com/protected/controllers/ApiController.php(55): NSession->check('25f7f3513363d03...')
+#5 /home/alexander/projects/yii/framework/web/actions/CInlineAction.php(49): ApiController->actionGetPinList()
+#6 /home/alexander/projects/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#7 /home/alexander/projects/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#8 /home/alexander/projects/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /home/alexander/projects/yii/framework/web/CWebApplication.php(282): CController->run('GetPinList')
+#10 /home/alexander/projects/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('api/GetPinList')
+#11 /home/alexander/projects/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#12 /home/alexander/projects/user_server.com/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/api/GetPinList/?sessionid=25f7f3513363d0335b9493f72867b312153a9ded973eef23269fbf2b3d92f083
+HTTP_REFERER=http://user_server.com/api/GetPinList/?sessionid=25f7f3513363d0335b9493f72867b312153a9ded973eef23269fbf2b3d92f083
+---
+2014/10/08 15:40:03 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''25f7f3513363d0335b9493f72867b312153a9ded973eef23269fbf2b3d92f083  LIMIT 1' at line 1. The SQL statement executed was: SELECT * FROM `tbl_session_id` `t` WHERE session_key = '25f7f3513363d0335b9493f72867b312153a9ded973eef23269fbf2b3d92f083  LIMIT 1.
+in /home/alexander/projects/user_server.com/protected/components/NSession.php (9)
+in /home/alexander/projects/user_server.com/protected/controllers/ApiController.php (55)
+in /home/alexander/projects/user_server.com/index.php (13)
+2014/10/08 15:40:03 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''25f7f3513363d0335b9493f72867b312153a9ded973eef23269fbf2b3d92f083  LIMIT 1' at line 1. The SQL statement executed was: SELECT * FROM `tbl_session_id` `t` WHERE session_key = '25f7f3513363d0335b9493f72867b312153a9ded973eef23269fbf2b3d92f083  LIMIT 1' in /home/alexander/projects/yii/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /home/alexander/projects/yii/framework/db/CDbCommand.php(415): CDbCommand->queryInternal('fetch', Array, Array)
+#1 /home/alexander/projects/yii/framework/db/ar/CActiveRecord.php(1351): CDbCommand->queryRow()
+#2 /home/alexander/projects/yii/framework/db/ar/CActiveRecord.php(1456): CActiveRecord->query(Object(CDbCriteria))
+#3 /home/alexander/projects/user_server.com/protected/components/NSession.php(9): CActiveRecord->find()
+#4 /home/alexander/projects/user_server.com/protected/controllers/ApiController.php(55): NSession->check('25f7f3513363d03...')
+#5 /home/alexander/projects/yii/framework/web/actions/CInlineAction.php(49): ApiController->actionGetPinList()
+#6 /home/alexander/projects/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#7 /home/alexander/projects/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#8 /home/alexander/projects/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /home/alexander/projects/yii/framework/web/CWebApplication.php(282): CController->run('GetPinList')
+#10 /home/alexander/projects/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('api/GetPinList')
+#11 /home/alexander/projects/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#12 /home/alexander/projects/user_server.com/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/api/GetPinList/?sessionid=25f7f3513363d0335b9493f72867b312153a9ded973eef23269fbf2b3d92f083
+---
+2014/10/08 15:40:03 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''25f7f3513363d0335b9493f72867b312153a9ded973eef23269fbf2b3d92f083  LIMIT 1' at line 1. The SQL statement executed was: SELECT * FROM `tbl_session_id` `t` WHERE session_key = '25f7f3513363d0335b9493f72867b312153a9ded973eef23269fbf2b3d92f083  LIMIT 1.
+in /home/alexander/projects/user_server.com/protected/components/NSession.php (9)
+in /home/alexander/projects/user_server.com/protected/controllers/ApiController.php (55)
+in /home/alexander/projects/user_server.com/index.php (13)
+2014/10/08 15:40:03 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''25f7f3513363d0335b9493f72867b312153a9ded973eef23269fbf2b3d92f083  LIMIT 1' at line 1. The SQL statement executed was: SELECT * FROM `tbl_session_id` `t` WHERE session_key = '25f7f3513363d0335b9493f72867b312153a9ded973eef23269fbf2b3d92f083  LIMIT 1' in /home/alexander/projects/yii/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /home/alexander/projects/yii/framework/db/CDbCommand.php(415): CDbCommand->queryInternal('fetch', Array, Array)
+#1 /home/alexander/projects/yii/framework/db/ar/CActiveRecord.php(1351): CDbCommand->queryRow()
+#2 /home/alexander/projects/yii/framework/db/ar/CActiveRecord.php(1456): CActiveRecord->query(Object(CDbCriteria))
+#3 /home/alexander/projects/user_server.com/protected/components/NSession.php(9): CActiveRecord->find()
+#4 /home/alexander/projects/user_server.com/protected/controllers/ApiController.php(55): NSession->check('25f7f3513363d03...')
+#5 /home/alexander/projects/yii/framework/web/actions/CInlineAction.php(49): ApiController->actionGetPinList()
+#6 /home/alexander/projects/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#7 /home/alexander/projects/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#8 /home/alexander/projects/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /home/alexander/projects/yii/framework/web/CWebApplication.php(282): CController->run('GetPinList')
+#10 /home/alexander/projects/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('api/GetPinList')
+#11 /home/alexander/projects/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#12 /home/alexander/projects/user_server.com/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/api/GetPinList/?sessionid=25f7f3513363d0335b9493f72867b312153a9ded973eef23269fbf2b3d92f083
+HTTP_REFERER=http://user_server.com/api/GetPinList/?sessionid=25f7f3513363d0335b9493f72867b312153a9ded973eef23269fbf2b3d92f083
+---
+2014/10/08 15:40:06 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''25f7f3513363d0335b9493f72867b312153a9ded973eef23269fbf2b3d92f083  LIMIT 1' at line 1. The SQL statement executed was: SELECT * FROM `tbl_session_id` `t` WHERE session_key = '25f7f3513363d0335b9493f72867b312153a9ded973eef23269fbf2b3d92f083  LIMIT 1.
+in /home/alexander/projects/user_server.com/protected/components/NSession.php (9)
+in /home/alexander/projects/user_server.com/protected/controllers/ApiController.php (55)
+in /home/alexander/projects/user_server.com/index.php (13)
+2014/10/08 15:40:06 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''25f7f3513363d0335b9493f72867b312153a9ded973eef23269fbf2b3d92f083  LIMIT 1' at line 1. The SQL statement executed was: SELECT * FROM `tbl_session_id` `t` WHERE session_key = '25f7f3513363d0335b9493f72867b312153a9ded973eef23269fbf2b3d92f083  LIMIT 1' in /home/alexander/projects/yii/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /home/alexander/projects/yii/framework/db/CDbCommand.php(415): CDbCommand->queryInternal('fetch', Array, Array)
+#1 /home/alexander/projects/yii/framework/db/ar/CActiveRecord.php(1351): CDbCommand->queryRow()
+#2 /home/alexander/projects/yii/framework/db/ar/CActiveRecord.php(1456): CActiveRecord->query(Object(CDbCriteria))
+#3 /home/alexander/projects/user_server.com/protected/components/NSession.php(9): CActiveRecord->find()
+#4 /home/alexander/projects/user_server.com/protected/controllers/ApiController.php(55): NSession->check('25f7f3513363d03...')
+#5 /home/alexander/projects/yii/framework/web/actions/CInlineAction.php(49): ApiController->actionGetPinList()
+#6 /home/alexander/projects/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#7 /home/alexander/projects/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#8 /home/alexander/projects/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /home/alexander/projects/yii/framework/web/CWebApplication.php(282): CController->run('GetPinList')
+#10 /home/alexander/projects/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('api/GetPinList')
+#11 /home/alexander/projects/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#12 /home/alexander/projects/user_server.com/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/api/GetPinList/?sessionid=25f7f3513363d0335b9493f72867b312153a9ded973eef23269fbf2b3d92f083
+---
+2014/10/08 15:40:06 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''25f7f3513363d0335b9493f72867b312153a9ded973eef23269fbf2b3d92f083  LIMIT 1' at line 1. The SQL statement executed was: SELECT * FROM `tbl_session_id` `t` WHERE session_key = '25f7f3513363d0335b9493f72867b312153a9ded973eef23269fbf2b3d92f083  LIMIT 1.
+in /home/alexander/projects/user_server.com/protected/components/NSession.php (9)
+in /home/alexander/projects/user_server.com/protected/controllers/ApiController.php (55)
+in /home/alexander/projects/user_server.com/index.php (13)
+2014/10/08 15:40:06 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''25f7f3513363d0335b9493f72867b312153a9ded973eef23269fbf2b3d92f083  LIMIT 1' at line 1. The SQL statement executed was: SELECT * FROM `tbl_session_id` `t` WHERE session_key = '25f7f3513363d0335b9493f72867b312153a9ded973eef23269fbf2b3d92f083  LIMIT 1' in /home/alexander/projects/yii/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /home/alexander/projects/yii/framework/db/CDbCommand.php(415): CDbCommand->queryInternal('fetch', Array, Array)
+#1 /home/alexander/projects/yii/framework/db/ar/CActiveRecord.php(1351): CDbCommand->queryRow()
+#2 /home/alexander/projects/yii/framework/db/ar/CActiveRecord.php(1456): CActiveRecord->query(Object(CDbCriteria))
+#3 /home/alexander/projects/user_server.com/protected/components/NSession.php(9): CActiveRecord->find()
+#4 /home/alexander/projects/user_server.com/protected/controllers/ApiController.php(55): NSession->check('25f7f3513363d03...')
+#5 /home/alexander/projects/yii/framework/web/actions/CInlineAction.php(49): ApiController->actionGetPinList()
+#6 /home/alexander/projects/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#7 /home/alexander/projects/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#8 /home/alexander/projects/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /home/alexander/projects/yii/framework/web/CWebApplication.php(282): CController->run('GetPinList')
+#10 /home/alexander/projects/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('api/GetPinList')
+#11 /home/alexander/projects/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#12 /home/alexander/projects/user_server.com/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/api/GetPinList/?sessionid=25f7f3513363d0335b9493f72867b312153a9ded973eef23269fbf2b3d92f083
+HTTP_REFERER=http://user_server.com/api/GetPinList/?sessionid=25f7f3513363d0335b9493f72867b312153a9ded973eef23269fbf2b3d92f083
+---
+2014/10/08 15:54:46 [warning] [NSession::set] errors saving SomeModel: array (
+)
+in /home/alexander/projects/user_server.com/protected/components/NSession.php (34)
+in /home/alexander/projects/user_server.com/protected/controllers/ApiController.php (94)
+in /home/alexander/projects/user_server.com/index.php (13)
+2014/10/08 15:54:47 [warning] [NSession::set] errors saving SomeModel: array (
+)
+in /home/alexander/projects/user_server.com/protected/components/NSession.php (34)
+in /home/alexander/projects/user_server.com/protected/controllers/ApiController.php (94)
+in /home/alexander/projects/user_server.com/index.php (13)
+2014/10/08 15:54:47 [warning] [NSession::set] errors saving SomeModel: array (
+)
+in /home/alexander/projects/user_server.com/protected/components/NSession.php (34)
+in /home/alexander/projects/user_server.com/protected/controllers/ApiController.php (94)
+in /home/alexander/projects/user_server.com/index.php (13)
+2014/10/08 15:54:48 [warning] [NSession::set] errors saving SomeModel: array (
+)
+in /home/alexander/projects/user_server.com/protected/components/NSession.php (34)
+in /home/alexander/projects/user_server.com/protected/controllers/ApiController.php (94)
+in /home/alexander/projects/user_server.com/index.php (13)
+2014/10/08 15:54:48 [warning] [NSession::set] errors saving SomeModel: array (
+)
+in /home/alexander/projects/user_server.com/protected/components/NSession.php (34)
+in /home/alexander/projects/user_server.com/protected/controllers/ApiController.php (94)
+in /home/alexander/projects/user_server.com/index.php (13)
+2014/10/08 15:54:48 [warning] [NSession::set] errors saving SomeModel: array (
+)
+in /home/alexander/projects/user_server.com/protected/components/NSession.php (34)
+in /home/alexander/projects/user_server.com/protected/controllers/ApiController.php (94)
+in /home/alexander/projects/user_server.com/index.php (13)
+2014/10/08 15:54:48 [warning] [NSession::set] errors saving SomeModel: array (
+)
+in /home/alexander/projects/user_server.com/protected/components/NSession.php (34)
+in /home/alexander/projects/user_server.com/protected/controllers/ApiController.php (94)
+in /home/alexander/projects/user_server.com/index.php (13)
+2014/10/08 15:54:49 [warning] [NSession::set] errors saving SomeModel: array (
+)
+in /home/alexander/projects/user_server.com/protected/components/NSession.php (34)
+in /home/alexander/projects/user_server.com/protected/controllers/ApiController.php (94)
+in /home/alexander/projects/user_server.com/index.php (13)
+2014/10/08 15:54:50 [warning] [NSession::set] errors saving SomeModel: array (
+)
+in /home/alexander/projects/user_server.com/protected/components/NSession.php (34)
+in /home/alexander/projects/user_server.com/protected/controllers/ApiController.php (94)
+in /home/alexander/projects/user_server.com/index.php (13)
+2014/10/08 15:54:50 [warning] [NSession::set] errors saving SomeModel: array (
+)
+in /home/alexander/projects/user_server.com/protected/components/NSession.php (34)
+in /home/alexander/projects/user_server.com/protected/controllers/ApiController.php (94)
+in /home/alexander/projects/user_server.com/index.php (13)
+2014/10/08 15:55:24 [warning] [NSession::set] errors saving SomeModel: array (
+)
+in /home/alexander/projects/user_server.com/protected/components/NSession.php (34)
+in /home/alexander/projects/user_server.com/protected/controllers/ApiController.php (94)
+in /home/alexander/projects/user_server.com/index.php (13)
+2014/10/08 15:55:25 [warning] [NSession::set] errors saving SomeModel: array (
+)
+in /home/alexander/projects/user_server.com/protected/components/NSession.php (34)
+in /home/alexander/projects/user_server.com/protected/controllers/ApiController.php (94)
+in /home/alexander/projects/user_server.com/index.php (13)
+2014/10/08 15:55:40 [warning] [NSession::set] errors saving SomeModel: array (
+)
+in /home/alexander/projects/user_server.com/protected/components/NSession.php (34)
+in /home/alexander/projects/user_server.com/protected/controllers/ApiController.php (94)
+in /home/alexander/projects/user_server.com/index.php (13)
+2014/10/08 15:55:41 [warning] [NSession::set] errors saving SomeModel: array (
+)
+in /home/alexander/projects/user_server.com/protected/components/NSession.php (34)
+in /home/alexander/projects/user_server.com/protected/controllers/ApiController.php (94)
+in /home/alexander/projects/user_server.com/index.php (13)

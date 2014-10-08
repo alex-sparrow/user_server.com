@@ -56,7 +56,8 @@ class SessionId extends CActiveRecord
         $c_time = time();
 
         $this->getDbCriteria()->mergeWith(array(
-            'condition'=>"session_key = '".$s_key."' AND exp_date < ".$c_time,
+            //'condition'=>"session_key = '".$s_key."' AND exp_date < ".$c_time,
+			'condition'=>"session_key = '".$s_key."'",
         ));
         return $this;
     }
